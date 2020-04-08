@@ -1,8 +1,8 @@
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mobx_slidy_example/app/modules/home/home_module.dart';
 
-import 'package:mobx_slidy_example/mobx_slidy_example/app/modules/home/home_controller.dart';
-import 'package:mobx_slidy_example/mobx_slidy_example/app/modules/home/home_module.dart';
+import 'package:mobx_slidy_example/app/modules/home/home_controller.dart';
 
 void main() {
   initModule(HomeModule());

@@ -1,0 +1,5 @@
+lib/app/modules/mobx/mobx_module.dart
+lib/app/modules/mobx/mobx_page.dart
+test/app/modules/mobx/mobx_page_test.dart
+lib/app/modules/mobx/mobx_controller.dart
+test/app/modules/mobx/mobx_controller_test.dart

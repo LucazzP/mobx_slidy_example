@@ -19,8 +19,25 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: <Widget>[],
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            RaisedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/mobx');
+              },
+              child: Text("Mobx example"),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/flutter_bloc');
+              },
+              child: Text("Flutter_bloc example"),
+            )
+          ],
+        ),
       ),
     );
   }

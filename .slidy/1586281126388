@@ -1,0 +1,5 @@
+lib/app/modules/flutter_bloc/flutter_bloc_module.dart
+lib/app/modules/flutter_bloc/flutter_bloc_page.dart
+test/app/modules/flutter_bloc/flutter_bloc_page_test.dart
+lib/app/modules/flutter_bloc/flutter_bloc_controller.dart
+test/app/modules/flutter_bloc/flutter_bloc_controller_test.dart

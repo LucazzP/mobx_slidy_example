@@ -1,0 +1,2 @@
+lib/app/modules/flutter_bloc/flutter_bloc_repository.dart
+test/app/modules/flutter_bloc/flutter_bloc_repository_test.dart
