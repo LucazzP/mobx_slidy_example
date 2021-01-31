@@ -23,12 +23,28 @@ class _RxNotifierPageState
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        bottom: PreferredSize(
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+            child: TextField(
+              onChanged: (text) {
+                date = DateTime.now();
+                store.search(text);
+              },
+              style: TextStyle(color: Colors.white),
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+              ),
+            ),
+          ),
+          preferredSize: Size.fromHeight(70),
+        ),
       ),
       body: RxBuilder(
         builder: (_) {
           print(DateTime.now().difference(date));
           return ListViewResourceWidget(
-            resource: store.listTodos.value,
+            resource: store.filteredListTodos,
             refresh: store.getTodos,
             loadingTileQuantity: 1,
             loadingTile: Center(
