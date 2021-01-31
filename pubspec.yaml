@@ -17,11 +17,13 @@ environment:
   sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
+  flutter_snow_base: ^1.1.0-nullsafety.0
+  rx_notifier: ^0.0.8
   flutter_bloc: ^3.2.0
   dio: ^3.0.10
   flutter_mobx: ^1.1.0+2
   mobx: ^1.2.1+4
-  flutter_modular: ^2.0.1
+  flutter_modular: ^3.0.0-nullsafety.15
   flutter:
     sdk: flutter
 

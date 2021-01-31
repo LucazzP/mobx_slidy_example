@@ -17,38 +17,42 @@ class _MobxPageState extends ModularState<MobxPage, MobxController> {
 
   @override
   Widget build(BuildContext context) {
+    var date = DateTime.now();
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Observer(
         builder: (_) {
-
-          if (controller.listTodos == null ||
-              controller.listTodos.status == FutureStatus.pending) {
+          print(DateTime.now().difference(date));
+          if (store.listTodos == null ||
+              store.listTodos.status == FutureStatus.pending) {
             // Loading
             return Center(
               child: CircularProgressIndicator(),
             );
-          } else if (controller.listTodos.error != null) {
+          } else if (store.listTodos.error != null) {
             // Error
             return Center(
               child: Text(
-                controller.listTodos.error.toString(),
+                store.listTodos.error.toString(),
               ),
             );
           }
 
           return RefreshIndicator(
-            onRefresh: () => controller.getTodos(),
+            onRefresh: () => store.getTodos(),
             child: ListView.builder(
-              itemCount: controller.listTodos.value.length,
+              itemCount: store.listTodos.value.length,
               itemBuilder: (context, index) {
-                final todo = controller.listTodos.value[index];
+                final todo = store.listTodos.value[index];
                 return ListTile(
                   title: Text(todo.title),
                   leading: IconButton(
-                    onPressed: () => controller.checkTodo(index),
+                    onPressed: () {
+                      date = DateTime.now();
+                      store.checkTodo(index);
+                    },
                     icon: Icon(
                       todo.completed
                           ? Icons.check_box

@@ -32,6 +32,12 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             ),
             RaisedButton(
               onPressed: () {
+                Navigator.of(context).pushNamed('/rx_notifier');
+              },
+              child: Text("Rx notifier example"),
+            ),
+            RaisedButton(
+              onPressed: () {
                 Navigator.of(context).pushNamed('/flutter_bloc');
               },
               child: Text("Flutter_bloc example"),
