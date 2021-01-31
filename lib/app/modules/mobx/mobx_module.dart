@@ -11,8 +11,8 @@ class MobxModule extends ChildModule {
       ];
 
   @override
-  List<Router> get routers => [
-        Router(Modular.initialRoute, child: (_, args) => MobxPage()),
+  List<ModularRouter> get routers => [
+        ModularRouter(Modular.initialRoute, child: (_, args) => MobxPage()),
       ];
 
   static Inject get to => Inject<MobxModule>.of();

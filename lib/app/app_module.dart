@@ -17,10 +17,10 @@ class AppModule extends MainModule {
       ];
 
   @override
-  List<Router> get routers => [
-        Router(Modular.initialRoute, module: HomeModule()),
-        Router('/mobx', module: MobxModule()),
-        Router('/flutter_bloc', module: FlutterBlocModule()),
+  List<ModularRouter> get routers => [
+        ModularRouter(Modular.initialRoute, module: HomeModule()),
+        ModularRouter('/mobx', module: MobxModule()),
+        ModularRouter('/flutter_bloc', module: FlutterBlocModule()),
       ];
 
   @override
